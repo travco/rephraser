@@ -54,3 +54,4 @@ Can be easy to remember if you say them to yourself "A diabetic-unicorn is trapp
 	 - [cmake](https://gitlab.kitware.com/cmake/cmake)  (apt package usually is `cmake`)
 		 - [libboost](https://gitlab.kitware.com/cmake/cmake/issues/19402) (apt package usually is `libboost-all-dev`)
 	 - [snappy](https://github.com/google/snappy) (apt package usually is `libsnappy-dev`)
+- **Python 3.5+** is strongly recommended (keyvi dropped support Python 2.7 and 3.4)
