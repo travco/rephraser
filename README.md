@@ -49,5 +49,8 @@ Can be easy to remember if you say them to yourself "A diabetic-unicorn is trapp
 
 #### Dependencies:
 
-- [Keyvi](https://github.com/KeyviDev/keyvi) `pip install keyvi` for efficient storage and shared-memory access by multiple processes
 - [Markovify](https://github.com/jsvine/markovify) `pip install markovify` for initial creation and compilation of Markov Chains
+- [Keyvi](https://github.com/KeyviDev/keyvi) `pip install keyvi` for efficient storage and shared-memory access by multiple processes
+	 - [cmake](https://gitlab.kitware.com/cmake/cmake)  (apt package usually is `cmake`)
+		 - [libboost](https://gitlab.kitware.com/cmake/cmake/issues/19402) (apt package usually is `libboost-all-dev`)
+	 - [snappy](https://github.com/google/snappy) (apt package usually is `libsnappy-dev`)

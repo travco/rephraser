@@ -1,5 +1,6 @@
 import markovify
-import keyvi
+import keyvi.compiler
+import keyvi.dictionary
 import os
 import sys
 from signal import signal, SIGINT, SIG_IGN
@@ -168,32 +169,32 @@ if __name__ == '__main__':
               combined_model = mmodel
       del mmodel
       combined_model.compile(inplace = True)
-      keyvicompiler = keyvi.JsonDictionaryCompiler()
+      keyvicompiler = keyvi.compiler.JsonDictionaryCompiler()
       for key in combined_model.chain.model:
         keyvicompiler.Add(' '.join(key), json.dumps(combined_model.chain.model[key]))
       del combined_model
       keyvicompiler.Compile()
       keyvicompiler.WriteToFile(args.model)
       del keyvicompiler
-      dct = keyvi.Dictionary(args.model)
+      dct = keyvi.dictionary.Dictionary(args.model)
     elif os.path.isfile(args.corpus):
       # Load single-file corpus from --corpus
       with open(args.corpus) as f:
         mmodel = markovify.Text(f, retain_original=False, state_size=args.ngrams)
       mmodel.compile(inplace = True)
-      keyvicompiler = keyvi.JsonDictionaryCompiler()
+      keyvicompiler = keyvi.compiler.JsonDictionaryCompiler()
       for key in mmodel.chain.model:
         keyvicompiler.Add(' '.join(key), json.dumps(mmodel.chain.model[key]))
       del mmodel
       keyvicompiler.Compile()
       keyvicompiler.WriteToFile(args.model)
       del keyvicompiler
-      dct = keyvi.Dictionary(args.model)
+      dct = keyvi.dictionary.Dictionary(args.model)
   elif args.model != '':
     # Load a saved model in a keyvi file
     if os.path.isfile(args.model):
       with open(args.model) as f:
-        dct = keyvi.Dictionary(args.model)
+        dct = keyvi.dictionary.Dictionary(args.model)
     else:
       sys.stderr.write('[REPHRASER] Couldn\'t find model at ' + args.model + '\n[REPHRASER] Exiting!\n')
       sys.exit(1)
