@@ -37,7 +37,7 @@ Adding special characters or numbers or other complexity, although not required,
 
 Combinations of thematically-unrelated words like:
 
-"diabeticUnicorn TRAPPED chicago tunnel"
+"diabetic unicorn TRAPPED chicago tunnel"
 
 Can be easy to remember if you say them to yourself "A diabetic-unicorn is trapped in a Chicago tunnel" and force an attacker to have
  a large dictionary with multiple types of words (cities, structures, fantasy creatures, verbs, medical conditions) to even have a chance of
@@ -54,4 +54,4 @@ Can be easy to remember if you say them to yourself "A diabetic-unicorn is trapp
 	 - [cmake](https://gitlab.kitware.com/cmake/cmake)  (apt package usually is `cmake`)
 		 - [libboost](https://gitlab.kitware.com/cmake/cmake/issues/19402) (apt package usually is `libboost-all-dev`)
 	 - [snappy](https://github.com/google/snappy) (apt package usually is `libsnappy-dev`)
-- **Python 3.5+** is strongly recommended (keyvi dropped support Python 2.7 and 3.4)
+- **Python 3.5+** is strongly recommended (keyvi dropped support for Python 2.7 and 3.4)
