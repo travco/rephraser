@@ -55,3 +55,8 @@ Can be easy to remember if you say them to yourself "A diabetic-unicorn is trapp
 		 - [libboost](https://gitlab.kitware.com/cmake/cmake/issues/19402) (apt package usually is `libboost-all-dev`)
 	 - [snappy](https://github.com/google/snappy) (apt package usually is `libsnappy-dev`)
 - **Python 3.5+** is strongly recommended (keyvi dropped support for Python 2.7 and 3.4)
+
+#### Other files in this repo:
+- `travco_princev8.rule` manually written ruleset for hashcat for use agaisnt passphrases (4000+ rules)
+- `commonprefixes_sorted_50k.rule` ruleset made by running zxcvbn-python on the 37+ million 15+ character passphrases in the haveibeenpwnedv2 list, sorted with the most common prefixes first
+- `commonsuffixes_sorted_50k.rule` ruleset made by running zxcvbn-python on the 37+ million 15+ character passphrases in the haveibeenpwnedv2 list, sorted with the most common suffixes first
