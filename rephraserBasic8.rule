@@ -1,0 +1,17 @@
+## Produces results that are:
+##   Titlecase with spaces inbetween
+:
+##   First letter capitalized with spaces inbetween
+c
+##   All lowercase with spaces inbetween
+l
+##   Camelcase with spaces inbetween
+T0
+##   Titlecase without spaces
+@ 
+##   First letter capitalized without spaces
+@  c 
+##   All lowercase without spaces
+@  l 
+##   Camelcase without spaces
+@  T0
