@@ -17,6 +17,10 @@ mpqueue = None # Will contain Queue
 MAXQUEUESIZE = 100000 # Number of work items that is reasonable to have on the queue
 worker_num = 0 # Will be changed before creating workers
 
+if sys.platform == "darwin":
+  MAXQUEUESIZE=32767 #max allowed mp queue size on mac
+  mp.set_start_method("fork") #necessary for workers to inherit global vars on mac
+
 def sigint_handler(signal_received, frame):
   # Following wrapup might not complete for minutes with 3 workers
   # for i in range(worker_num):
